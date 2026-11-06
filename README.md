@@ -99,7 +99,7 @@ Then open http://localhost:3000
 
 The Register buttons throughout the site point to:
 
-https://docs.google.com/forms/d/e/1FAIpQLSfuRsYl8njQQ2LQf8vlm_o1---L7gWosk8O96VIoPUmq544aQ/viewform?usp=publish-editor
+https://docs.google.com/forms/d/e/1FAIpQLSdeebFurFT1MncDkmhAGwuMxhhTMupV_-NeFWT7HNKFGW0tsQ/viewform?usp=header
 
 Change it in `src/lib/event-config.ts` → `registrationUrl` if needed.
 

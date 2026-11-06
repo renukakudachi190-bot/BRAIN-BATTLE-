@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #00E5FF;
+  --secondary: #A855F7;
+  --accent: #FBBF24;
+  --bg: #05050A;
+  --surface: #0C0C14;
+  --text: #F1F5F9;
+  --text-muted: #94A3B8;
+  --border: #1E293B;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Orbitron', system-ui, sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.bg-neural {
+  background-color: #05050A;
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 229, 255, 0.12), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 60%, rgba(168, 85, 247, 0.08), transparent),
+    linear-gradient(rgba(0, 229, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 229, 255, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 60px 60px, 60px 60px;
+}
+
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.35), 0 0 40px rgba(0, 229, 255, 0.15);
+}
+
+.glow-text {
+  text-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 px-8 py-3.5 
+         font-semibold tracking-wide rounded-lg
+         bg-cyan-400 text-slate-950
+         transition-all duration-300
+         hover:bg-cyan-300 hover:scale-[1.03] hover:shadow-[0_0_25px_rgba(0,229,255,0.45)]
+         active:scale-[0.98];
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 px-8 py-3.5 
+         font-semibold tracking-wide rounded-lg
+         border border-cyan-400/60 text-cyan-300 bg-transparent
+         transition-all duration-300
+         hover:bg-cyan-400/10 hover:border-cyan-300 hover:scale-[1.03]
+         active:scale-[0.98];
+}
+
+.section-padding {
+  @apply px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+}
+
+.container-narrow {
+  @apply max-w-6xl mx-auto;
+}
+
+.card {
+  @apply bg-[#0C0C14] border border-slate-800/80 rounded-xl
+         transition-all duration-300;
+}
+
+.card:hover {
+  @apply border-cyan-500/30 bg-[#0F0F18];
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a12;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
